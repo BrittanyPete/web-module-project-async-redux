@@ -12,7 +12,7 @@ const Character = (props) => {
       <p>{char.house}</p>
       <p>{char.patronus}</p>
       <p>{char.ancestry}</p>
-      <p>{char.species}</p>
+      <p>Species: {char.species}</p>
     </div>
   )
 }

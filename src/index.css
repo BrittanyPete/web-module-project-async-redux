@@ -1,21 +1,79 @@
 
 body {
-	background: #f5f5f5;
+	background: white;
+}
 
+.App {
+	background-color: #F8F6F5;
+	border: 1px solid #F8F6F5;
+	border-radius: 10px;
+	margin: 1%;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 2%;
+	color: darkslategray;
+}
+
+h2, p {
+	color: darkslategray;
 }
 
 #btn-div {
-	border: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+	margin: 2%;
+	/* border: 1px solid black; */
 }
 .btn {
-	border: 1px solid red;
+	border-radius: 10px;
+	font-size: 1.8rem;
+	font-weight: 500;
+	padding: 1%;
 }
+
+
+.all-btn {
+	border: 2px solid #7f0909;
+	background-color: #FFC500;
+	color: #7f0909;	
+}
+
+.gryf-btn {
+	border: 2px solid #FFC500;
+	background-color: #7f0909;
+	color: #FFC500;	
+}
+
+.slyth-btn {
+	border: 2px solid #AAAAAA;
+	background-color: #0D6217;
+	color: #AAAAAA;
+}
+
+.huff-btn {
+	border: 2px solid #000000;
+	background-color: #EEE117;
+	color: #000000;
+}
+
+.rave-btn {
+	border: 2px solid #946B2D;
+	background-color: #000A90;
+	color: #946B2D;
+}
+
+.btn:hover {
+	transform: scale(1.1);
+	color: white;
+}
+
 
 #characterList {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	/* width: 30%; */
 }
 
 .character {
@@ -24,9 +82,29 @@ body {
 	align-items: center;
 	width: 30%;
 	border: 1px solid gold;
+	border-radius: 10px;
+	padding: 1%;
 	margin: 1rem auto;
 }
 
 p {
 	margin-bottom: .25rem;
+}
+
+@media (max-width: 880px) {
+	.btn {
+		font-size: 1rem;
+	}
+	.character {
+		width: 40%;
+	}
+}
+
+@media (max-width: 500px) {
+	.btn {
+		font-size: .9rem;
+	}
+	.character {
+		width: 70%;
+	}
 }

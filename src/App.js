@@ -39,7 +39,7 @@ function App(props) {
     <div className="App">
       <h1>Harry Potter Characters</h1>
       <div id='btn-div'>
-        <button onClick={handleAllChars} className='btn' >All Characters</button>
+        <button onClick={handleAllChars} className='btn all-btn' >All Characters</button>
         <button onClick={handleGryffindor} className='btn gryf-btn' >Gryffindor</button>
         <button onClick={handleSlytherin} className='btn slyth-btn'>Slytherin</button>
         <button onClick={handleHufflepuff} className='btn huff-btn'>Hufflepuff</button>
