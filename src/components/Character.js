@@ -9,8 +9,10 @@ const Character = (props) => {
     <div className='character'>
       <h2>{char.name}</h2>
       <img width='200' src={char.image}/>
-      <p>House: {char.house}</p>
-      <p>Patronus: {char.patronus}</p>
+      <p>{char.house}</p>
+      <p>{char.patronus}</p>
+      <p>{char.ancestry}</p>
+      <p>{char.species}</p>
     </div>
   )
 }
