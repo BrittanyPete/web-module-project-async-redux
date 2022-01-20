@@ -1,14 +1,38 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './App.css';
-import Character from './components/Characters';
+import CharacterList from './components/CharacterList';
+import SearchForm from './components/SearchForm';
 
-function App() {
+
+function App(props) {
+  console.log(props)
+  const { searching, error } = props;
+
+
+  if (error !== '') {
+    return <h3>{error}</h3>
+  }
+
+   
   return (
     <div className="App">
-      <h1>Harry Potter Characters</h1>
-      <Character />
+      <h1>Search Harry Potter Characters</h1>
+      <SearchForm />
+
+    {
+      searching ? <h3>Searching Characters</h3> : <CharacterList />
+    }
+      
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    searching: state.searching,
+    error: state.error
+  }
+}
+
+export default connect(mapStateToProps)(App);
