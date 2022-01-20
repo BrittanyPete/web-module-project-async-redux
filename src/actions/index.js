@@ -10,8 +10,8 @@ export const getCharacters = () => {
         dispatch({type:DATA_FETCH});
         axios.get(`http://hp-api.herokuapp.com/api/characters`)
             .then(res => {
-                console.log(res.data[1]);
-                dispatch({type: DATA_SUCCESS, payload: Response.data});
+                console.log('response:', res.data[0]);
+                dispatch({type: DATA_SUCCESS, payload: res.data[0]});
             })
             .catch(err => {
                 dispatch({type: DATA_FAILED, payload: err})
@@ -25,10 +25,10 @@ export const dataFetch = () => {
     return({type:DATA_FETCH});
 }
 
-export const dataSuccess = (character) => {
-    return({type:DATA_SUCCESS, payload: character});
+export const dataSuccess = (characters) => {
+    return({type:DATA_SUCCESS, payload: characters});
 }
 
-export const dataFailed = (errorMessage) => {
-    return({type:DATA_FAILED, payload: errorMessage});
+export const dataFailed = (error) => {
+    return({type:DATA_FAILED, payload: error});
 }

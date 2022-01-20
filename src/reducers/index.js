@@ -1,13 +1,14 @@
 import { DATA_FETCH, DATA_FAILED, DATA_SUCCESS } from "../actions";
 
 
+
 const initialState = {
     character: {
-        name: 'Harry Potter',
-        house: 'Gryffindor',
+        name: 'Brittany',
+        house: 'Ravenclaw',
         wizard: true,
-        image: `http://hp-api.herokuapp.com/images/harry.jpg`, 
-        dateOfBirth: Date,
+        image: ``, 
+        dateOfBirth: 'Jan 1, 1988',
     },
     isFetching: false,
     error: ''
@@ -16,6 +17,7 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
     console.log('3. passes action into the reducer', action);
+    console.log('initialState:', state);
     switch (action.type) {
         case DATA_FETCH:
             console.log('4. execute FETCH_DATA action.')
